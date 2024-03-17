@@ -1,0 +1,261 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    background: radial-gradient(#cfbee2, #b8a9d4);
+}
+
+.container {
+    margin: 2.5vh;
+    height: 95vh;
+    box-shadow: 10px 10px 15px rgb(57, 57, 57);
+    display: flex;
+    justify-content: space-evenly;
+    border-radius: 30px;
+    background-color: white;
+}
+
+.image {
+    background: linear-gradient(rgba(117, 85, 166, 1) 0%, rgba(117, 85, 166, 1) 50%, rgba(150, 84, 184, 1) 100%);
+    flex-grow: 7;
+    clip-path: polygon(0% 0%, 91% 0%, 100% 101%, 0% 101%);
+    border-radius: 10px 0 0 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 100%;
+    position: relative;
+}
+
+nav {
+    position: absolute;
+    width: 150px;
+    height: 50px;
+    left: 0;
+    top: 0;
+    padding: 20px;
+    background: #897abf;
+    border-radius: 10px 0 0 0;
+    clip-path: polygon(0 0%, 100% 0%, 90% 100%, 0% 100%);
+    display: flex;
+    align-items: center;
+    z-index: 2;
+}
+
+nav p {
+    margin: 10px;
+    font-size: 30px;
+    color: white;
+}
+
+.nav-svg {
+    width: 30px;
+    fill: white;
+}
+
+.nav-svg:hover {
+    fill: rgb(77, 77, 77);
+    cursor: pointer;
+}
+
+.nav-menu {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.nav-menu a {
+    text-decoration: none;
+    color: white;
+}
+
+.nav-menu a:hover {
+    cursor: pointer;
+    color: rgb(77, 77, 77);
+}
+
+.open {
+    width: 131px;
+    height: 50px;
+    left: 0;
+    top: 89px;
+    padding: 20px;
+    background: #897abf;
+    clip-path: polygon(0 0%, 100% 0%, 90% 100%, 0% 100%);
+    z-index: 1;
+    transition: 1s;
+}
+
+.close {
+    width: 190px;
+    height: 50px;
+    left: -235px;
+    top: 89px;
+    padding: 20px;
+    background: #897abf;
+    clip-path: polygon(0 0%, 100% 0%, 90% 100%, 0% 100%);
+    z-index: 1;
+    transition: 1s;
+}
+
+img {
+    max-width: 65%;
+    height: auto;
+    clip-path: polygon(0% 0%, 91% 0%, 100% 101%, 0% 101%);
+    border-radius: 10px 0 0 10px;
+    z-index: 2;
+}
+
+.l-r {
+    display: flex;
+}
+
+.l-r svg {
+    margin-top: 10px;
+    width: 15px;
+    fill: white;
+}
+
+.l-r svg:hover {
+    fill: rgb(77, 77, 77);
+    cursor: pointer;
+}
+
+.form-container {
+    background: white;
+    flex-grow: 3;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 0 10px 10px 0;
+    text-align: center;
+    padding-right: 40px;
+    padding-left: 10px;
+}
+
+.user {
+    width: 100px;
+    fill: rgba(163, 163, 163, 0.905);
+    margin-bottom: 10px;
+}
+
+.input-text {
+    background: rgba(163, 163, 163, 0.368);
+    width: 250px;
+    height: 38px;
+    margin: 5px;
+    border-radius: 15px;
+    padding-left: 10px;
+}
+
+.label-input {
+    font-size: 13px;
+}
+
+.form-checkbox {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.form-checkbox input {
+    margin: 0 10px;
+}
+
+.button {
+    transition: all ease 0.5s;
+    background: #7555a6;
+    color: white;
+    height: 25px;
+    width: 160px;
+    border-radius: 40px;
+}
+
+.button:hover {
+    transition: all ease 0.5s;
+    background: rgb(206, 79, 206);
+}
+
+.login {
+    font-size: 10px;
+    margin-top: 15px;
+}
+
+.login a {
+    color: palevioletred;
+    text-decoration: none;
+}
+
+a p {
+    margin-top: 3px;
+}
+
+.login a:visited {
+    color: palevioletred;
+}
+
+@media (max-width: 1200px) {
+    img {
+        max-width: 75%;
+        z-index: 0;
+    }
+    .image {
+        clip-path: polygon(0% 0%, 88% 0%, 100% 101%, 0% 101%);
+    }
+    .open {
+        z-index: 3;
+    }
+}
+
+@media (max-width: 950px) {
+    .form-container {
+        max-width: 200px;
+    }
+    .input-text {
+        width: 180px;
+    }
+    .image {
+        clip-path: polygon(0% 0%, 86% 0%, 100% 101%, 0% 101%);
+    }
+}
+
+@media (max-width: 750px) {
+    .container {
+        display: block;
+        height: 100%;
+    }
+
+    .image {
+        clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+        border-radius: 10px 10px 0 0;
+    }
+
+    img {
+        clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+        border-radius: 10px;
+        margin-top: 100px;
+    }
+
+    .l-r {
+        margin-bottom: 20px;
+    }
+
+    .form-container {
+        margin: 0 auto;
+        padding: 20px;
+    }
+}
+
+@media (max-width: 600px) {
+    img {
+        max-width: 75%;
+    }
+}
